@@ -1,7 +1,8 @@
-import { SALUDAR } from '../actions/index.js';
+import { SALUDAR, GET_MOVIES } from '../actions/index.js';
 
 const initialState = {
-  saludar: false
+  saludar: false,
+  movies: {}
 }
 
 const rootReducer = (state = initialState, action) => {
@@ -10,6 +11,14 @@ const rootReducer = (state = initialState, action) => {
       return {
         ...state,
         saludar: true
+      }
+    case GET_MOVIES:
+      return {
+        ...state,
+        movies: {
+          ...action.payload,
+          pages: Math.ceil(Number(action.payload.total) / 10)
+        }
       }
     default:
       return state;
