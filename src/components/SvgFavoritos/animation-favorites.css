@@ -1,0 +1,66 @@
+.pop {
+	transform-origin: 50% 50%;
+	animation-delay: 1.5s;
+}
+
+svg:hover > .bucket {
+  animation: pulse 2.5s infinite;
+}
+
+svg:hover > .left {
+  animation: rotatePopLEFT 2.5s infinite;
+}
+
+svg:hover > .right {
+  animation: rotatePopRIGHT 2.5s infinite;
+}
+
+@keyframes rotatePopLEFT {
+  0% {
+  	transform: rotate(-20deg) scale(0.9);
+  	opacity: 1;
+  }
+
+  50% {
+  	transform: rotate(-30deg) scale(1.1);
+  	opacity: 1;
+  }
+
+  100% {
+  	opacity: 0;
+  	transform: rotate(-30deg) scale(1.1);
+  }
+}
+
+@keyframes rotatePopRIGHT {
+  0% {
+  	transform: rotate(0deg) scale(1.1);
+  	opacity: 1;
+  }
+
+  50% {
+  	transform: rotate(30deg) scale(0.9);
+  	opacity: 1;
+  }
+
+  100% {
+  	opacity: 0;
+  	transform: rotate(30deg) scale(0.9);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+  }
+  40% {
+    transform: scale(1) rotate(5deg);
+  }
+  58% {
+  	opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(5deg);
+    opacity: 0;
+  }
+}

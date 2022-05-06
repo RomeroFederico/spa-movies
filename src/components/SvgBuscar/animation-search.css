@@ -1,0 +1,88 @@
+.glass {
+	transform-origin: center;
+	/*animation-play-state: paused;*/
+}
+
+.card {
+	transform-origin: center;
+	/*animation-play-state: paused;*/
+}
+
+.dos{
+	animation-delay: 500ms;
+}
+
+.tres {
+	animation-delay: 1s;
+}
+
+svg:hover > .glass {
+  animation: move-around 2.5s infinite;
+}
+
+svg:hover > .card {
+  animation: move-up 2.5s infinite;
+}
+
+svg:hover > .dos {
+  animation-delay: 500ms;
+}
+
+svg:hover > .tres {
+  animation-delay: 1s;
+}
+
+@keyframes move-around {
+  0% {
+  	opacity: 0;
+    transform: translate(-100%);
+  }
+
+  10% {
+  	opacity: 0;
+  }
+
+  25% {
+  	opacity: 1;
+    transform: translate(-35%);
+  }
+
+  50% {
+    transform: translate(0%);
+  }
+
+  75% {
+  	opacity: 1;
+    transform: translate(35%);
+  }
+
+  80% {
+  	opacity: 0;
+  }
+
+  100% {
+    transform: translate(100%);
+  }
+}
+
+@keyframes move-up {
+	0% {
+		transform: translateY(0);
+	}
+
+	15% {
+		transform: translateY(0);
+	}
+
+	30% {
+		transform: translateY(-15%);
+	}
+
+	40% {
+		transform: translateY(0);
+	}
+
+	100% {
+		transform: translateY(0);
+	}
+}
