@@ -1,8 +1,9 @@
-import { SALUDAR, GET_MOVIES } from '../actions/index.js';
+import { SALUDAR, GET_MOVIES, CHANGE_THEME } from '../actions/index.js';
 
 const initialState = {
   saludar: false,
-  movies: {}
+  movies: {},
+  theme: "darkTheme"
 }
 
 const rootReducer = (state = initialState, action) => {
@@ -19,6 +20,11 @@ const rootReducer = (state = initialState, action) => {
           ...action.payload,
           pages: Math.ceil(Number(action.payload.total) / 10)
         }
+      }
+    case CHANGE_THEME:
+      return {
+        ...state,
+        theme: state.theme === "darkTheme" ? "lightTheme" : "darkTheme"
       }
     default:
       return state;

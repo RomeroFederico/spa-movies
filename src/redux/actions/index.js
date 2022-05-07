@@ -1,6 +1,7 @@
 export const SALUDAR  = "SALUDAR";
 export const SALUDAR_CON_CB  = "SALUDAR";
 export const GET_MOVIES  = "GET_MOVIES";
+export const CHANGE_THEME  = "CHANGE_THEME";
 
 const API_KEY = "38115414";
 
@@ -44,5 +45,11 @@ export function getMovies(title, page = 1) {
 					 	else console.log("No se encontraron las peliculas");
 					 })
 					 .catch((error) => console.log(error));
+	}
+}
+
+export function changeTheme() {
+	return {
+		type: CHANGE_THEME
 	}
 }

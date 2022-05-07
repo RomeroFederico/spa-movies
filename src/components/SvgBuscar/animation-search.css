@@ -16,19 +16,23 @@
 	animation-delay: 1s;
 }
 
-svg:hover > .glass {
+.transition {
+	transition: fill 1s;
+}
+
+.animated > .glass {
   animation: move-around 2.5s infinite;
 }
 
-svg:hover > .card {
+.animated > .card {
   animation: move-up 2.5s infinite;
 }
 
-svg:hover > .dos {
+.animated > .dos {
   animation-delay: 500ms;
 }
 
-svg:hover > .tres {
+.animated > .tres {
   animation-delay: 1s;
 }
 

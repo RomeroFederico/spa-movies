@@ -3,15 +3,15 @@
 	animation-delay: 1.5s;
 }
 
-svg:hover > .bucket {
+.animated > .bucket {
   animation: pulse 2.5s infinite;
 }
 
-svg:hover > .left {
+.animated > .left {
   animation: rotatePopLEFT 2.5s infinite;
 }
 
-svg:hover > .right {
+.animated > .right {
   animation: rotatePopRIGHT 2.5s infinite;
 }
 

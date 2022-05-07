@@ -15,7 +15,7 @@
 .line {
   border: 0rem solid green;
   border-left-width: 0rem;
-  border-left-color: orange;
+  border-left-color: var(--secondaryColor);
   transition: border-left-width 0.5s;
   width: 8rem;
   height: 3px;
@@ -71,7 +71,7 @@
 }
 
 .hoverwrap:hover {
-  border-color: orange;
+  border-color: var(--secondaryColor);
 }
 
 .hoverwrap:hover .hovercap {
@@ -166,7 +166,7 @@
 {
   content:"";
   position:absolute; 
-  z-index:-1;
+  z-index:1;
   box-shadow:0 0 20px rgba(0,0,0,0.8), 0 8px 6px -6px black;
   top:10px;
   bottom:10px;

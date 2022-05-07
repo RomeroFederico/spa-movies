@@ -5,13 +5,15 @@ import s from './BotonBuscarSvg.module.css';
 
 export default function BotonBuscarSvg() {
 
-  React.useEffect(() => {
-    console.log("Cargo...");
-  }, [])
+  let [ animated, setAnimated ] = React.useState(false);
+
+  let handleHover = function(){
+    setAnimated(!animated);
+  }
 
   return (
-    <div className = {`${s.hoverwrap} ${s.effect}`}>
-      <SvgBuscar />
+    <div className = {`${s.hoverwrap} ${s.effect}`} onMouseEnter = {handleHover} onMouseLeave = {handleHover} >
+      <SvgBuscar className = { animated ? "animated" : "" }/>
       <div className = {s.hovercap} >
         <h3 className  = {s.titlePeliculas}>Buscar Peliculas</h3>
         <div className  = {s.line}></div>
