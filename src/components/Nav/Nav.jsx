@@ -1,12 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import BotonBuscarSvg from '../BotonBuscarSvg/BotonBuscarSvg';
 import BotonFavoritosSvg from '../BotonFavoritosSvg/BotonFavoritosSvg';
 import { changeTheme } from '../../redux/actions/index.js';
 import s from './Nav.module.css';
+import { ReactComponent as SvgSun } from '../SvgSun/SvgSun.svg';
+import { ReactComponent as SvgMoon } from '../SvgMoon/SvgMoon.svg';
 
 export default function Nav() {
+
+  let theme = useSelector((state) => state.theme);
 
   let dispatch = useDispatch();
 
@@ -17,7 +21,11 @@ export default function Nav() {
   return (
     <>
       <div className = {s.divNav}>
-        <div onClick = {handleClick} className = {s.btn}>Cambiar Tema</div>
+        {/*<div onClick = {handleClick} className = {s.btn}>Cambiar Tema</div>*/}
+        <div className = {s.btnTheme} onClick = {handleClick} >
+          { theme === 'darkTheme' && <SvgSun className = {s.sun} /> }
+          { theme === 'lightTheme' && <SvgMoon className = {s.moon} /> }
+        </div>
         <Link to = "/favoritos" style= { {textDecoration: 'none'}} >
           <div className = {s.btn}>
             FAVORITOS

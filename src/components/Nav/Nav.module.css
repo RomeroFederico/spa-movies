@@ -28,7 +28,8 @@
 	transition: background-color 0.5s;
 }
 
-.btn:Hover {
+.btn:hover,
+.btnTheme:hover {
 	cursor: pointer;
 	background-color: rgba(255, 255, 255, 0.1);
 }
@@ -47,4 +48,71 @@
 	border-left-width: 3rem;
 	border-right-width: 3rem;
 	visibility: visible;
+}
+
+.btnTheme {
+	width: 10rem;
+	height: 3rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.sun {
+	width: 2rem;
+	aspect-ratio: 1 / 1;
+	fill: white;
+}
+
+.moon {
+	width: 2rem;
+	aspect-ratio: 1 / 1;
+	fill: white;
+}
+
+.btnTheme:hover > .sun {
+	animation: rotateSun 10s infinite linear;
+	cursor: pointer;
+	fill: var(--secondaryColor);
+}
+
+.btnTheme:hover > .moon {
+	animation: rotateMoon 4s infinite linear;
+	cursor: pointer;
+	fill: var(--secondaryColor);
+}
+
+@keyframes rotateSun {
+	from {
+		transform: rotate(0);
+	}
+	to {
+		transform: rotate(359deg);
+	}
+}
+
+@keyframes rotateMoon {
+	0% {
+		transform: rotate(0);
+	}
+
+	10% {
+		transform: rotate(0);
+	}
+
+	40% {
+		transform: rotate(-20deg);
+	}
+
+	60% {
+		transform: rotate(-20deg);
+	}
+
+	90% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(0);
+	}
 }

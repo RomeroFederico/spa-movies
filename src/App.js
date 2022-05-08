@@ -16,9 +16,9 @@ function App() {
   return (
     <div className = {`${theme} main`}>
       <Nav />
+      <Buscador />
       <Routes>
-        <Route exact path = "/" element = { <Saludar /> } />
-        <Route path = "/home" element = { <Home /> } />
+        <Route path = "/" element = { <Home /> } />
         <Route path = "/buscar" element = { <BotonBuscarSvg /> } />
         <Route path = "/favoritos" element = { <BotonFavoritosSvg /> } />
       </Routes>

@@ -2,14 +2,14 @@
   --primaryColor: #232323;
   --primaryColorSub: #424242;
   --secondaryColor: orange;
-  --secondaryColorSub: #ff8000;
+  --secondaryColorSub: #FB6A01;
 }
 
 .lightTheme {
   --primaryColor: #f2f2f2;
   --primaryColorSub: gray;
-  --secondaryColor: orange;
-  --secondaryColorSub: #ff8000;
+  --secondaryColor: hsl(190, 81%, 67%);
+  --secondaryColorSub: hsl(190, 81%, 67%);
 }
 
 .main {

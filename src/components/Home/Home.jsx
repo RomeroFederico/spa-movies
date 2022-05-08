@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
 import Indice from '../Indice/Indice';
+import Card from '../Card/Card';
 
 export default function Home() {
 
@@ -12,9 +13,13 @@ export default function Home() {
     <>
       {
       	result.map((m, i) => { return (
-      		<div key = {`search-result-${m.imdbID}-${i}`}>
-      			<span>{m.Title}</span>
-      		</div>
+      		<Card 
+            key = {`search-result-${m.imdbID}-${i}`}
+            title = {m.Title}
+            img = {m.Poster}
+            year = {m.Year}
+            type = {m.Type}
+          />
       	)})
       }
       <Indice />
