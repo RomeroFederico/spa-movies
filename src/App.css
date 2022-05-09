@@ -4,6 +4,7 @@
   --secondaryColor: orange;
   --secondaryColorSub: #FB6A01;
   --fontColorMain: #FFFFFF;
+  --fontColorSub: #808080;
 }
 
 .lightTheme {
@@ -12,6 +13,7 @@
   --secondaryColor: hsl(190, 81%, 67%);
   --secondaryColorSub: hsl(190, 81%, 67%);
   --fontColorMain: #000000;
+  --fontColorSub: #737373;
 }
 
 .main {

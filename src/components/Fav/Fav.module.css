@@ -1,0 +1,57 @@
+.heartEmpty {
+  font-size: 1.5rem;
+  color: gray;
+}
+
+.bubble {
+  border-radius: 50%;
+  animation: bubbles 1s cubic-bezier(0.17, 0.89, 0.32, 1.49);
+  border: 1px solid gold;
+  border-color: #cc8ef5;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+
+  animation-fill-mode: forwards;
+}
+
+.heart {
+  animation: like 1s cubic-bezier(0.17, 0.89, 0.32, 1.49);
+  font-size: 1.5rem;
+  color: #e2264d;
+
+  animation-fill-mode: forwards;
+}
+
+@keyframes bubbles {
+
+  0% {
+    border-width: 0;
+    opacity: 1;
+    height: 0rem;
+    width: 0rem;
+  }
+
+  20% {
+    border-width: 1rem;
+    opacity: 1;
+    height: 0.3rem;
+    width: 0.3rem;
+  }
+  100% {
+    border-width: 0rem;
+    opacity: 0;
+    height: 2rem;
+    width: 2rem;
+    opacity: 1;
+  }
+}
+
+@keyframes like {
+  0%, 15% {
+    font-size: 0;
+  }
+}

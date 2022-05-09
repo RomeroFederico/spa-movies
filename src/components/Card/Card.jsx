@@ -1,6 +1,7 @@
 import React from 'react';
 // import { useSelector, useDispatch } from 'react-redux';
 // import { getSaludoCB } from '../../redux/actions/index.js';
+import Fav from '../Fav/Fav';
 import s from './Card.module.css';
 import poster from '../../img/poster-not-found.svg';
 
@@ -28,6 +29,7 @@ export default function Card({ title, img, year, type }) {
           { !error && <img src = {img} alt = {title} onError = {handleErrorImage} className = {s.img}/>}
           { error && <img src = {poster} alt = {title} className = {s.img}/> }
           <div className = {s.fav}>
+            <Fav />
           </div>
         </div>
         <div className = {s.divInfo}>
