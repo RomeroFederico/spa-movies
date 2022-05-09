@@ -2,6 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux';
 import Indice from '../Indice/Indice';
 import Card from '../Card/Card';
+import s from './Home.module.css';
 
 export default function Home() {
 
@@ -10,7 +11,8 @@ export default function Home() {
 	if (!result) return <span>Cargando elementos.</span>
 
   return (
-    <>
+    <div className = {s.divContainter}>
+      <div className = {s.divCards}>
       {
       	result.map((m, i) => { return (
       		<Card 
@@ -22,7 +24,8 @@ export default function Home() {
           />
       	)})
       }
+      </div>
       <Indice />
-    </>
+    </div>
   )
 };

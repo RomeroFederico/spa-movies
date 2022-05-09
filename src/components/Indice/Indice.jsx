@@ -12,7 +12,7 @@ export default function Buscador() {
 	}
 
   return (
-  	<>
+  	<div>
 	    {
 	    	pages && Array(pages).fill(0).map((_, i) => { return (
 	    		<button 
@@ -24,6 +24,6 @@ export default function Buscador() {
 	    		</button>
 	    	)})
 	    }
-    </>
+    </div>
   )
 };

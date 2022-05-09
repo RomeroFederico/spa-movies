@@ -1,6 +1,7 @@
 import React from 'react';
 // import { useSelector, useDispatch } from 'react-redux';
 // import { getSaludoCB } from '../../redux/actions/index.js';
+import s from './Card.module.css';
 import poster from '../../img/poster-not-found.svg';
 
 export default function Card({ title, img, year, type }) {
@@ -19,16 +20,22 @@ export default function Card({ title, img, year, type }) {
   }
 
   return (
-    <div>
-      <div>
-        { !error && <img src = {img} alt = {title} onError = {handleErrorImage} />}
-        { error && <img src = {poster} alt = {title} /> }
-      </div>
-      <div>
-        <span>{title}</span>
-        <div>
-          <span>{type}</span>
-          <span>{year}</span>
+    <div className = {s.container}>
+      <div className = {s.divCard}>
+        <div className = {s.divImg}>
+          <div className = {s.wrap}>
+          </div>
+          { !error && <img src = {img} alt = {title} onError = {handleErrorImage} className = {s.img}/>}
+          { error && <img src = {poster} alt = {title} className = {s.img}/> }
+          <div className = {s.fav}>
+          </div>
+        </div>
+        <div className = {s.divInfo}>
+          <div className = {s.divTitle}>{title.length < 45 ? title : title.slice(0, 45) + '...'}</div>
+          <div className = {s.divSubInfo}>
+            <span>Type: {type}</span>
+            <span>Year: {year}</span>
+          </div>
         </div>
       </div>
     </div>
