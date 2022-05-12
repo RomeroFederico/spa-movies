@@ -5,7 +5,7 @@ import Fav from '../Fav/Fav';
 import s from './Card.module.css';
 import poster from '../../img/poster-not-found.svg';
 
-export default function Card({ title, img, year, type }) {
+export default function Card({ title, img, year, type, index }) {
 
   // let stateSaludar = useSelector((state) => state.saludar);
   // let dispatch = useDispatch();
@@ -21,7 +21,7 @@ export default function Card({ title, img, year, type }) {
   }
 
   return (
-    <div className = {s.container}>
+    <div className = {`${s.container} ${s['s' + index]} ${s.showContainer}`} >
       <div className = {s.divCard}>
         <div className = {s.divImg}>
           <div className = {s.wrap}>

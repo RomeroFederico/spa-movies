@@ -21,6 +21,7 @@ export default function Home() {
             img = {m.Poster}
             year = {m.Year}
             type = {m.Type}
+            index = {i + 1}
           />
       	)})
       }

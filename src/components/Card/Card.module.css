@@ -124,3 +124,60 @@
 		opacity: 1;
 	}
 }
+
+.showContainer {
+	animation-name: fadeIn;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+  visibility: hiden;
+}
+
+.s1 {
+	animation-delay: 0;
+}
+
+.s2 {
+	animation-delay: 100ms;
+}
+
+.s3 {
+	animation-delay: 200ms;
+}
+
+.s4 {
+	animation-delay: 300ms;
+}
+
+.s5 {
+	animation-delay: 400ms;
+}
+
+.s6 {
+	animation-delay: 500ms;
+}
+
+.s7 {
+	animation-delay: 600ms;
+}
+
+.s8 {
+	animation-delay: 700ms;
+}
+
+.s9 {
+	animation-delay: 800ms;
+}
+
+.s10 {
+	animation-delay: 900ms;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+ 	100% {
+  		opacity: 1;
+ 	}
+}
